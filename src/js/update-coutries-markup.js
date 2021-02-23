@@ -10,7 +10,7 @@ defaults.delay = 3000;
 function updateCountriesMarkup (countries) {
     if (countries.status === 404) {
         error({
-            text: 'Nothing found'
+            text: 'Sorry, nothing found'
         })
         return
     } 
@@ -23,7 +23,8 @@ function updateCountriesMarkup (countries) {
     }
     else if (countries.length <= 10 && countries.length > 1) {
         info({
-            text: "Too many results. Please, specify your request."
+            title: 'Too many results.',
+            text: "Please, specify your request."
           });
         const markup = resultsTpl(countries)
         refs.resultsContainer.insertAdjacentHTML('beforeend', markup)
