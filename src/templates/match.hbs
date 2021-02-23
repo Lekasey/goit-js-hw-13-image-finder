@@ -1,0 +1,21 @@
+{{#each this}}
+<li class="search-form__results-match" >
+    <h2 class="search-form__results-name">{{name}}</h2>
+    <div style="display: flex;">
+        <div class="search-form__results-container">
+            <img src={{flag}} alt="" width="100%">
+        </div>
+        <div class="search-form__results-container"> 
+            <p class="search-form__results-text">Capital: {{capital}}</p>           
+            <p class="search-form__results-text">Population: {{population}}</p>
+            <p class="search-form__results-text">Languages:</p>
+            <ul> 
+                {{#each languages}}
+                <li>{{name}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</li>
+
+{{/each}}
