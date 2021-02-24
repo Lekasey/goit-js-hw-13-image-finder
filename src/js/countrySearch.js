@@ -12,11 +12,13 @@ refs.searchBar.addEventListener('submit', event => {
 
 function queryResult (event) {
     event.preventDefault();
-    const input = event.target;
-    const inputValue = input.value;
+    const inputValue = event.target.value;
     
     refs.resultsContainer.innerHTML = ''
     fetchCoutries(inputValue).then(updateCoutriesMarkup).catch(error => {
+        if (inputValue === null) {
+            return
+        }
         refs.resultsContainer.innerHTML = ''
     })
 

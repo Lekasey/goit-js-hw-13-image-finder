@@ -12,14 +12,12 @@ function updateCountriesMarkup (countries) {
         error({
             text: 'Sorry, nothing found'
         })
-        return
     } 
     else if (countries.length > 10) {
         notice({
             title: 'Too many maches found.',
             text: 'Specify your request.'
         })
-        return
     }
     else if (countries.length <= 10 && countries.length > 1) {
         info({
@@ -27,13 +25,15 @@ function updateCountriesMarkup (countries) {
             text: "Please, specify your request."
           });
         const markup = resultsTpl(countries)
-        refs.resultsContainer.insertAdjacentHTML('beforeend', markup)
-        return
+        updateMarkup(markup)
     }
     else if (countries.length = 1) {
         const markup = matchTpl(countries)
-        refs.resultsContainer.insertAdjacentHTML('beforeend', markup)
-        return
+        updateMarkup(markup)
     }  
 }
 export default updateCountriesMarkup
+
+function updateMarkup (markup) {
+    refs.resultsContainer.insertAdjacentHTML('beforeend', markup)
+}
