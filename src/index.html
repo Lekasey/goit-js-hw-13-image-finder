@@ -9,18 +9,24 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
+/>
 
   </head>
   <body>
-    <section class="container">
-      <div>
-        
-          <label for="query">Enter country name</label>
-          <input type="text" name="query" id="query" class="search-form__bar js-search-bar">
-          
-          <ul class="search-form__results js-search-result"></ul>
-        </div>
-    </section>
-   
+    <form class="search-form" id="search-form">
+      <input
+        type="text"
+        name="query"
+        autocomplete="off"
+        placeholder="Search images..."
+      />
+    </form>
+    <ul class="gallery">
+
+    </ul>
+   <button type="button" class="js-more">Load more</button>
   </body>
 </html>

@@ -1,21 +1,25 @@
 {{#each this}}
-<li class="search-form__results-match" >
-    <h2 class="search-form__results-name">{{name}}</h2>
-    <div class="flexbox">
-        <div class="search-form__results-container">
-            <img src={{flag}} alt="flag of{{name}}" width="100%">
-        </div>
-        <div class="search-form__results-container"> 
-            <p class="search-form__results-text">Capital: {{capital}}</p>           
-            <p class="search-form__results-text">Population: {{population}}</p>
-            <p class="search-form__results-text">Languages:</p>
-            <ul> 
-                {{#each languages}}
-                <li>{{name}}</li>
-                {{/each}}
-            </ul>
-        </div>
-    </div>
-</li>
+<div class="photo-card">
+  <img src="{{webformatURL}}" alt="{{tags}}" />
+
+  <div class="stats flexbox">
+    <p class="stats-item">
+      <i class="material-icons">thumb_up</i>
+      {{likes}}
+    </p>
+    <p class="stats-item">
+      <i class="material-icons">visibility</i>
+      {{views}}
+    </p>
+    <p class="stats-item">
+      <i class="material-icons">comment</i>
+      {{comments}}
+    </p>
+    <p class="stats-item">
+      <i class="material-icons">cloud_download</i>
+      {{downloads}}
+    </p>
+  </div>
+</div>
 
 {{/each}}
