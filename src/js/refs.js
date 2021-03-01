@@ -1,9 +1,8 @@
-const refs = {
-    form: document.querySelector('.search-form'),
-    gallery: document.querySelector('.gallery'),
-    galleryItem: document.querySelector('.photo-card'),
-    input: document.querySelector('input'),
-    loadMoreBtn: document.querySelector('[data-action="load-more"]'),
-}
+const form = document.querySelector('.search-form');
+const gallery = document.querySelector('.gallery');
+const galleryItem = document.querySelector('.photo-card__image');
+const input = document.querySelector('input');
 
-export default refs;
+
+
+export default {form, gallery, galleryItem, input};

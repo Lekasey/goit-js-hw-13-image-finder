@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link
   href="https://fonts.googleapis.com/icon?family=Material+Icons"
   rel="stylesheet"
@@ -19,6 +20,7 @@
     <div class="container">
       <form class="search-form" id="search-form">
         <input
+        class="input"
           type="text"
           name="query"
           autocomplete="off"
@@ -28,7 +30,24 @@
       <ul class="gallery flexbox">
   
       </ul>
-     <button type="button" class="js-more-btn" data-action="load-more">Load more</button>
+      
+
+
+     <button type="button" class="btn btn-primary button is-hidden" data-action="load-more">
+      <span 
+        class="spinner-border spinner-border-sm spinner" 
+        role="status" 
+        aria-hidden="true"
+      ></span>
+      <span class="lable">Show more</span>
+
+     
+    </button>
+
+     <!-- <button class="btn btn-primary" type="button" disabled>
+      Loading...
+    </button> -->
+
     </div>
     
   </body>
