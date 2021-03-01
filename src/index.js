@@ -8,8 +8,8 @@ import pixabayService from './js/pixabay-service'
 import clearGallery from './js/clear-gallery'
 import loadMoreBtn from './js/loadMoreBtn'
 
-refs.form.addEventListener('input', _.debounce(searchImage, 500))
-refs.form.addEventListener('submit', (event) => event.preventDefault())
+refs.form.addEventListener('submit', searchImage)
+// refs.form.addEventListener('submit', (event) => event.preventDefault())
 
 loadMoreBtn.refs.node.addEventListener('click', () => {
     pixabayService.scrollPos = document.documentElement.offsetHeight - 40;
@@ -18,9 +18,8 @@ loadMoreBtn.refs.node.addEventListener('click', () => {
 
 
 function searchImage (event) {
-    
     event.preventDefault();
-    pixabayService.query = event.target.value
+    pixabayService.query = refs.input.value
    
     clearGallery()
     pixabayService.resetStats();
